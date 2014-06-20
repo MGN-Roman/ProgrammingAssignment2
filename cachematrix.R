@@ -35,7 +35,8 @@ makeCacheMatrix <- function(x = matrix()) {
 ## inverse of "my_matrix" matrix and puts it in cache. Next time you call "cacheSolve(smthn)"
 ## it returns the inverse of "my_matrix" from cache. If "my_matrix" was changed you have to do
 ## "smthn <- makeCacheMatrix(my_matrix)" action again and then call "cacheSolve(smthn)"
-cacheSolve <- function(x, ..., silent = FALSE) {
+## making silent = FALSE will let the function to print messages
+cacheSolve <- function(x, ..., silent = TRUE) {
         ## Return a matrix that is the inverse of 'x'
   mx_inv <- x$getinv()
    if(!is.null(mx_inv)) {
